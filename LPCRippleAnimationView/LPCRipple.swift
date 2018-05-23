@@ -16,6 +16,7 @@ public final class LPCRipple {
     private let currentViewController: UIViewController!
     private let startColor: UIColor!
     private let endColor: UIColor!
+    private var errorView: LPCRippleView?
     
     // MARK: Public Properties
     
@@ -23,9 +24,7 @@ public final class LPCRipple {
         return !(self.errorView?.isHidden ?? true)
     }
     
-    // MARK: Private Properties
-    
-    private var errorView: LPCRippleView?
+    // MARK: Constructors
     
     public init(viewController: UIViewController, startFrame: CGRect, startColor: UIColor? = nil, endColor: UIColor? = nil) {
         self.currentViewController = viewController
@@ -48,12 +47,10 @@ public final class LPCRipple {
     
     public final func play() {
         if self.errorView == nil {
-            
-            LPCRippleView.startColor = self.startColor
-            LPCRippleView.endColor = self.endColor
-            
             if let parentView = self.currentViewController.view {
-                self.errorView = LPCRippleView(frame: CGRect(x: 0, y: 0, width: parentView.frame.width, height: parentView.frame.height))
+                self.errorView = LPCRippleView(frame: CGRect(x: 0, y: 0, width: parentView.frame.width, height: parentView.frame.height),
+                                               startColor: self.startColor,
+                                               endColor: self.endColor)
             
                 if let errorView = self.errorView {
                     parentView.insertSubview(errorView, at: 1)
