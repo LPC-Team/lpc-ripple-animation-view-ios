@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "Alaeddine Ouertani" => "ouertani.alaeddine@gmail.com" }
   s.source       = { :git => "https://github.com/LPC-Team/lpc-ripple-animation-view-ios.git", :tag => "#{s.version}" }
-  s.source_files  = "Classes", "LPCOfflineBannerView/**/*.Swift"
+  s.source_files  = "Classes", "LPCRippleAnimationView/**/*.Swift"
   s.exclude_files = "Classes/Exclude"
   s.platform = :ios, '9.0'
 
