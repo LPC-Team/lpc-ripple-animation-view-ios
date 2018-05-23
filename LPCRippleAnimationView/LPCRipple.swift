@@ -33,13 +33,13 @@ public final class LPCRipple {
         if let startColor = startColor {
             self.startColor = startColor
         } else {
-            self.startColor = UIColor.darkRedColor
+            self.startColor = UIColor.lpcDarkRedColor
         }
         
         if let endColor = endColor {
             self.endColor = endColor
         } else {
-            self.endColor = UIColor.redColor
+            self.endColor = UIColor.lpcRedColor
         }
     }
 

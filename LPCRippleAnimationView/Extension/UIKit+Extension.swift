@@ -11,8 +11,8 @@ import UIKit
 extension UIColor {
     // MARK: UIColor
     
-    static let redColor = UIColor(red: 96, green: 22, blue: 45)
-    static let darkRedColor = UIColor(red: 227, green: 45, blue: 80)
+    static let lpcRedColor = UIColor(red: 96, green: 22, blue: 45)
+    static let lpcDarkRedColor = UIColor(red: 227, green: 45, blue: 80)
     
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
